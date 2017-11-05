@@ -508,11 +508,11 @@ ColorARGB GifTranscoder::gifColorToColorARGB(const GifColorType& color) {
 
 GifFilesCloser::~GifFilesCloser() {
     if (mGifIn) {
-        DGifCloseFile(mGifIn, NULL);
+        DGifCloseFile(mGifIn);
         mGifIn = NULL;
     }
     if (mGifOut) {
-        EGifCloseFile(mGifOut, NULL);
+        EGifCloseFile(mGifOut);
         mGifOut = NULL;
     }
 }
